@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    /*#040a14*/
+    background-color: #081221;
+    font-family: sans-serif;
+}
+
+/*==============Début style barre navigation==============*/
+.barre_navigation_container{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height:100px;
+    z-index: 999;
+    /*background-color: antiquewhite;*/
+}
+
+.navbar-container{
+ background-image: -webkit-linear-gradient(#081221,#081221,#081221,#08122191);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.logo_container{
+    /*background-color: blue;*/
+    flex: 1;
+    padding: 80px;
+    width: 20%;
+}
+
+.logo{
+    position: relative;
+    color: rgb(255, 255, 255);
+    right: -50px;
+    user-select: none;
+}
+
+.barre_recherche_container{
+background-color: #373958;
+height: 40%;
+flex: 3;
+border-radius: 8px;
+display: flex;
+align-items: center;
+box-shadow: 3px 3px 20px rgb(0, 0, 0);
+margin: 0 30px;
+transition: 0.5s;
+}
+
+.barre_recherche_container:hover{
+  transform: scale(1.1);
+}
+
+.barre::placeholder{
+
+    color: rgb(100, 97, 114);
+    font-size: 18px;
+    font-weight:bold;
+}
+#recherche{
+    margin-top: 5px;
+    padding-left: 8px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+input{
+    background-color: #373958;
+    border: none;
+    outline: none;
+    caret-color: white;
+    color: rgb(100, 97, 114) ;
+    width: 100%;
+    font-size: 18px;
+}
+
+.profile_container{
+    /*background-color: blueviolet;*/
+    height:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Fr{
+    height: 40%;
+    background-color: #373958;
+    width: 98px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: rgb(100, 97, 114) ;
+    font-weight:bold;
+    box-shadow: 3px 3px 20px rgb(0, 0, 0);
+    user-select: none;
+
+}
+
+#con{
+    height: 40%;
+    background-color: #373958;
+    width: 110px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight:bold;
+    box-shadow: 3px 3px 20px rgb(0, 0, 0);
+    user-select: none;
+    font-size: 15px;
+}
+
+#con a{
+    color: white;
+}
+
+.photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+
+/*==============fin style barre navigation==============*/
+
+
+
+.sidebar{
+    width: 22%;
+    height: 100%;
+    /*background-color:white;*/
+    position: fixed;
+    top: 100px;
+    margin-right: 50px;
+    z-index: 5;
+    margin-right: 150px;
+
+}
+
+/*Pour avoir une sorte carré donc d'espace dans la sidebar*/
+.sidebar_menu{
+   /* background-color: #373958;*/
+    margin: 22px;
+    height: 100%;
+   
+}
+
+.contenu_page{
+    width: 68%;
+    height: 100%;
+    background-color:none;
+    position: absolute;
+    top: 100px;
+    margin-left: 380px;
+    margin-right: 150px;
+    user-select: none;
+}
+
+.listeIcone{
+    list-style: none;
+   
+}
+.BoutonMenu{
+    cursor: pointer;
+    user-select: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 242px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 12px;
+    gap: 20px;
+}
+
+.Item{
+    margin-bottom: 10px;
+}
+
+.imgBouton{
+    margin-left: 15px;
+}
+
+.active{
+    background-color: #373958;
+    outline: none;
+    border: none;
+    width: 242px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 12px;
+    gap: 20px;
+    cursor: pointer;
+    transition: all .8s ease;
+}
+
+.TextBouton{
+    color: white;
+    font-size: 15px;
+}
+
+.separateur{
+    width:70%;
+    margin: 30px 0;
+    background-color: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.597);
+}
+/***Section film***/
+
+.films{
+    padding-top: 22px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.titre_categorie{
+    color: white;
+    font-size: 25px;
+    padding-bottom: 22px;
+}
+
+.film_container{
+    margin-top: 22px;
+    position: relative;
+    background-color: none;
+    height:320px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quatre éléments par ligne */
+    gap: 45px;
+
+}
+
+.film_item {
+    position: relative;
+    height: 100%;
+    background-color: #101a2c;
+    border-radius: 18px;
+    box-shadow: 3px 3px 25px rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+}
+
+.vignette_film{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    z-index: 5;
+}
+
+.desc_film{
+    z-index: 5;
+    background-color: #101a2c;
+    height: 25%;
+    width: 100%;
+    border-bottom-left-radius:18px ;
+    border-bottom-right-radius: 18px;
+}
+
+.film_fondu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(9, 17, 42, 0.885);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition:all ease 0.7s;
+    
+}
+
+.film_item:hover .film_fondu{
+    opacity: 1;
+    transition: all ease 0.5s;
+}
+
+.film_item:hover{
+    transform: scale(1.1);
+}
+.info_film{
+    height: 75%;
+    background-color: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 22px;
+    font-weight: bolder;
+    margin-left: 15px;
+   
+}
+
+
+.classification{
+    color: white;
+   font-size: 15px;
+}
+
+.desc_film{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.titre_film{
+    margin-left: 18px;
+}
+.genre{
+    margin-left: 18px;
+}
+
+.bouton_play{
+    cursor: pointer;
+}
